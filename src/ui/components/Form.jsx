@@ -39,6 +39,7 @@ class Form extends Component {
           value={this.props.text}
           onChange={this.handleChange}
           style={styles.input}
+          autoFocus
         />
         <button onClick={this.handleClick} style={styles.button}>
           Add todo

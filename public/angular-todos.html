@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Todos App</title>
+  <link rel="stylesheet" href="angular-todos.css">
+</head>
+
+<body>
+  <div id="app" ng-app>
+    <div id="root" ng-init="todos = ['Todo 1', 'Todo 2', 'Todo 3']">
+      <form>
+        <input ng-model="text" autofocus />
+        <button ng-click="todos.push(text); text = ''">Add todo</button>
+      </form>
+      <ul>
+        <li ng-repeat="todo in todos">{{todo}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</body>
+
+</html>

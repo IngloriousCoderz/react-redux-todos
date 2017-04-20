@@ -1,0 +1,25 @@
+body {
+  margin: 10px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+input {
+  box-sizing: border-box;
+  width: 75%;
+  margin-right: -5px;
+}
+
+button {
+  width: 25%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ul {
+  background-color: cornflowerblue;
+  list-style-type: none;
+  padding: 10px;
+}
