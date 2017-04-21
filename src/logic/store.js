@@ -3,7 +3,7 @@ import {createStore} from 'redux';
 import rootReducer from './reducers/root';
 import {addTodo, removeTodo} from './actions';
 
-const initialState = {value: '', todos: ['Todo 1', 'Todo 2', 'Todo 3']};
+const initialState = {text: '', todos: ['Todo 1', 'Todo 2', 'Todo 3']};
 
 const store = createStore(
   rootReducer,

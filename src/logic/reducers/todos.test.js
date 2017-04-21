@@ -1,5 +1,5 @@
 import todos from './todos';
-import {addTodo} from '../actions';
+import {addTodo, removeTodo} from '../actions';
 
 describe('todos', () => {
   it('should add a todo', () => {
@@ -9,4 +9,12 @@ describe('todos', () => {
 
     expect(todos(stateBefore, action)).toEqual(stateAfter);
   });
+
+  it('should remove the first todo', () => {
+    const stateBefore = ['hello', 'world'];
+    const action = removeTodo();
+    const stateAfter = ['world'];
+
+    expect(todos(stateBefore, action)).toEqual(stateAfter);
+  })
 });

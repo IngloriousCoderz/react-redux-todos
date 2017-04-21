@@ -1,5 +1,5 @@
 import root from './root';
-import {addTodo} from '../actions';
+import {addTodo, removeTodo} from '../actions';
 
 describe('todos', () => {
   it('should add a todo and void text', () => {
@@ -15,4 +15,18 @@ describe('todos', () => {
 
     expect(root(stateBefore, action)).toEqual(stateAfter);
   });
+
+  it('should remove first todo without impacting on text', () => {
+    const stateBefore = {
+      text: 'world',
+      todos: ['hello', 'world'],
+    };
+    const action = removeTodo();
+    const stateAfter = {
+      text: 'world',
+      todos: ['world'],
+    };
+
+    expect(root(stateBefore, action)).toEqual(stateAfter);
+  })
 });
